@@ -13,11 +13,10 @@ class DialogClass(QDialog, Ui_Dialog):
         # define the clipboard
         self.clipboard = clipboard
 
-        self.buttonBox.rejected.connect(self.reject)
+        self.buttonBox.rejected.connect(self.cancel)
         self.buttonBox.accepted.connect(self.save_to_clipboard)
 
         self.create_button.clicked.connect(self.io_url)
-        self.create_button.setDefault(True)
 
     def io_url(self):
         url = self.text_input.text()
@@ -29,8 +28,16 @@ class DialogClass(QDialog, Ui_Dialog):
         self.text_input.clear()
 
     def save_to_clipboard(self):
-        self.clipboard.setText(self.text_ouput.toPlainText())
+        txt = self.text_ouput.toPlainText()
+        if len(txt) == 0:
+            txt = self.io_url()
+        self.clipboard.setText(txt)
+
         self.text_ouput.clear()
+        self.reject()
+
+    def cancel(self):
+        self.text_ouput.setPlainText("")
         self.reject()
 
     def exec(self, service):
@@ -59,5 +66,4 @@ class DialogClass(QDialog, Ui_Dialog):
             if self.service == "Gist":
                 return gist_(url)
         except Exception as error:
-            raise error
             return str(error)

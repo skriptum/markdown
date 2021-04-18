@@ -1,9 +1,9 @@
 <RCC>
   <qresource prefix="icon">
-    <file>icon.png</file>
-    <file>markdown.png</file>
+    <file alias="icon.png">img/icon.png</file>
+    <file alias="markdown.png">img/markdown.png</file>
   </qresource>
   <qresource prefix="lang">
-    <file>languages.json</file>
+    <file alias="languages.json">languages.json</file>
   </qresource>
 </RCC>

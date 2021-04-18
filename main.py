@@ -7,6 +7,7 @@ from dialogclass import DialogClass
 #set up the app
 app = QApplication([])
 app.setQuitOnLastWindowClosed(False)
+app.setWindowIcon(QIcon(u":/icon/markdown.png"))
 clipboard = app.clipboard()
 
 #set up the window
@@ -46,6 +47,7 @@ menu = QMenu()
 #create all actions
 youtube_action = QAction("Youtube")
 youtube_action.triggered.connect(lambda x:app.dialog_window.exec("Youtube"))
+youtube_action.setShortcut(QKeySequence("Ctrl+Y"))
 
 twitter_action = QAction("Twitter")
 twitter_action.triggered.connect(lambda x:app.dialog_window.exec("Twitter"))
@@ -58,6 +60,7 @@ giphy_action.triggered.connect(lambda x:app.dialog_window.exec("Giphy"))
 
 website_action = QAction("Website")
 website_action.triggered.connect(lambda x:app.dialog_window.exec("Website"))
+website_action.setShortcut(QKeySequence("Ctrl+W"))
 
 codepen_action = QAction("CodePen")
 codepen_action.triggered.connect(lambda x:app.dialog_window.exec("CodePen"))
@@ -74,6 +77,7 @@ gist_action.triggered.connect(lambda x:app.dialog_window.exec("Gist"))
 # Add a Quit option to the menu.
 quit_action = QAction("Quit")
 quit_action.triggered.connect(app.quit)
+quit_action.setShortcut(QKeySequence("Ctrl+Q"))
 #-------------------------------------------------------------------------------
 
 #add actions to the menu
