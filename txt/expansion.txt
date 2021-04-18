@@ -1,0 +1,101 @@
+
+#web
+- YouTube
+- Vimeo
+- twitter
+- giphys
+- website
+
+# code
+- codepen
+- jsfiddle
+- GitHub ( complicated )
+
+# documents
+- google drive
+- google pdf viewer
+
+# online tools
+- figma
+- google maps
+
+# markdown
+- table
+- latex
+- image
+
+ 
+# Webpages with IFRAME
+
+Youtube:
+Video Url: https://www.youtube.com/watch?v=a3HZ8S2H-GQ
+Iframe URL: 
+```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a3HZ8S2H-GQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+Twitter:
+URL: https://twitter.com/OlliLuksic/status/1380580489396940805
+Iframe: 
+```
+<iframe height="250" width="100%"
+ src="https://twitframe.com/show?url=https://twitter.com/OlliLuksic/status/1380580489396940805"></iframe>
+```
+
+Codepen:
+URL : https://codepen.io/nohoid/pen/kIfto
+Iframe: <iframe height="265" style="width: 100%;" scrolling="no" title="Rainbow gradient background animation" src="https://codepen.io/nohoid/embed/kIfto?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+
+Google Drive
+URL:	 https://drive.google.com/drive/folders/1FjG8bk9ozVuuPBKHqsX2-5sLytJPnAea
+Iframe: <iframe src="https://drive.google.com/embeddedfolderview?id=1FjG8bk9ozVuuPBKHqsX2-5sLytJPnAea#grid” style="width:100%; height:600px; border:0;"></iframe>
+
+Sigma
+URL= https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File
+Iframe: <iframe src="https://www.figma.com/embed?embed_host=astra&url=https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File" width="100%" height="450px"></iframe>
+
+Website:
+URL=  https://en.wikipedia.org/wiki/Isopogon_anethifolius
+Iframe: <iframe src="https://en.wikipedia.org/wiki/Isopogon_anethifolius" height="450px" width="100%"></iframe>
+
+# Markdown Expansions
+Table: 
+|      |      |
+| ---- | ---- |
+|      |      |
+
+Math: Input 
+$$
+
+$$
+
+Code:
+```
+
+```
+
+Line: ***
+
+Image:
+![Image]()
+
+Todo:
+-[]
+ <a href="{{}}">Link</a> 
+Unsupported often
+Github Gist with script
+URL: https://gist.github.com/deven9229/1dde509e2993ec876a8668f5da90e7c8
+HTML: <script src="https://gist.github.com/deven9229/1dde509e2993ec876a8668f5da90e7c8.js"></script>
+
+PDF: 
+Path: /Users/marten/Desktop/meldeschein.pdf
+HTML: <embed src="/Users/marten/Desktop/meldeschein.pdf" type="application/pdf" width ="100%" height="300px"></embed>
+
+AUDIO:
+Path: /Users/marten/Desktop/sample.mp3
+HTML: <audio src="/Users/marten/Desktop/sample.mp3"></audio> 
+
+Markdown
+Path: /Users/marten/Desktop/test.txt
+HTML: <embed src="/Users/marten/Desktop/test.txt" type="text/plain" charset=UTF-8  width="500" height="300" frameBorder="0"></embed>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19925.69635182398!2d12.36862489023158!3d51.371590195222076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a657f933ca723f%3A0x521b1cb4289e170!2sNordost%2C%20Leipzig!5e0!3m2!1sde!2sde!4v1618081113576!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
