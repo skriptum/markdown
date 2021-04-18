@@ -68,6 +68,9 @@ jsfiddle_action.triggered.connect(lambda x:app.dialog_window.exec("JSFiddle"))
 github_action = QAction("GitHub")
 github_action.triggered.connect(lambda x:app.dialog_window.exec("GitHub"))
 
+gist_action = QAction("Gist")
+gist_action.triggered.connect(lambda x:app.dialog_window.exec("Gist"))
+
 # Add a Quit option to the menu.
 quit_action = QAction("Quit")
 quit_action.triggered.connect(app.quit)
@@ -86,6 +89,7 @@ menu.addSeparator()
 menu.addAction(codepen_action)
 menu.addAction(jsfiddle_action)
 menu.addAction(github_action)
+menu.addAction(gist_action)
 menu.addSeparator()
 
 menu.addAction(quit_action)

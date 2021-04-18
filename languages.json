@@ -21,6 +21,8 @@
     ".topojson": "json",
 
     ".md": "markdown",
+    ".markdown": "markdown",
+    ".mkd": "markdown",
 
     ".clj": "clojure",
     ".boot": "clojure",

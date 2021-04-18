@@ -17,6 +17,7 @@ class DialogClass(QDialog, Ui_Dialog):
         self.buttonBox.accepted.connect(self.save_to_clipboard)
 
         self.create_button.clicked.connect(self.io_url)
+        self.create_button.setDefault(True)
 
     def io_url(self):
         url = self.text_input.text()
@@ -24,6 +25,7 @@ class DialogClass(QDialog, Ui_Dialog):
         txt = self.iframer(url)
 
         self.text_ouput.setPlainText(txt)
+        self.create_button.setDefault(False)
         self.text_input.clear()
 
     def save_to_clipboard(self):
@@ -54,6 +56,8 @@ class DialogClass(QDialog, Ui_Dialog):
                 return jsfiddle_(url)
             if self.service == "GitHub":
                 return github_(url)
-                
+            if self.service == "Gist":
+                return gist_(url)
         except Exception as error:
+            raise error
             return str(error)

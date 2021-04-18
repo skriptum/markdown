@@ -122,7 +122,7 @@ A <a href="{url}">JSFiddle</a> by <a href="https://jsfiddle.net/user/{author}">{
 """
     return iframe
 
-
+#all github things
 
 import requests
 import base64
@@ -134,10 +134,11 @@ def github_(url):
 
     try:
         result = regex.search(ex, url).groupdict()
+        user = result["user"]
     except:
-        InvalidURLError(url, "GitHub")
+        raise InvalidURLError(url, "GitHub")
 
-    request_url = f'https://api.github.com/repos/{result["user"]}/{result["repo"]}/contents/{result["path"]}'
+    request_url = f'https://api.github.com/repos/{user}/{result["repo"]}/contents/{result["path"]}'
     response = requests.get(request_url).json()
 
     file_name = response["name"]
@@ -149,21 +150,52 @@ def github_(url):
     content = f"""```{highlight}
 {content}
 ```
-[{file_name}]({url}) by [{result["user"]}](https://github.com/{result["user"]}), hosted on [GitHub](https://github.com)
+[{file_name}]({url}) by [{user}](https://github.com/{user}), hosted on [GitHub](https://github.com)
 """
 
     return content
 
 
 def language_check(file_name):
-    suffix = file_name.split(".")[1]
-    suffix = "." +suffix
 
     f = open("languages.json")
     l_dict = json.load(f)
-
-    highlight = l_dict[suffix]
+    try:
+        suffix = file_name.split(".")[1]
+        suffix = "." +suffix
+        highlight = l_dict[suffix]
+    except:
+        highlight = ""
     return highlight
 
 
+# gist
+
+def gist_(url):
+    ex = r"(?:https?:)?\/\/(?:gist\.)?github\.com\/(?P<user>[A-z0-9_-]+)\/(?P<id>[A-z0-9_-]+)"
+    try:
+        result = regex.search(ex, url).groupdict()
+        user = result["user"]
+    except:
+        raise InvalidURLError(url, "Gist")
+
+    headers = {"accept": "application/vnd.github.v3.raw+json"}
+    request_url = f"https://api.github.com/gists/{result['id']}"
+    response = requests.get(request_url, headers = headers).json()
+
+    files = ""
+    for file in response["files"].values():
+        filename = file["filename"]
+        content = file["content"]
+        
+        highlight = language_check(filename)
+        
+        txt = f"""```{highlight}
+{content}
+```
+Gist [{filename}]({url}) by [{user}](https://github.com/{user})
+"""
+        files += txt
+    
+    return files
 
