@@ -18,7 +18,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(454, 285)
+        Dialog.resize(478, 364)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -27,7 +27,28 @@ class Ui_Dialog(object):
         Dialog.setAutoFillBackground(False)
         self.horizontalLayout_2 = QHBoxLayout(Dialog)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.icon = QLabel(Dialog)
+        self.widget_2 = QWidget(Dialog)
+        self.widget_2.setObjectName(u"widget_2")
+        self.verticalLayout_2 = QVBoxLayout(self.widget_2)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.label_2 = QLabel(self.widget_2)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setMaximumSize(QSize(100, 100))
+        self.label_2.setPixmap(QPixmap(u":/logos/website"))
+        self.label_2.setScaledContents(True)
+        self.label_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+
+        self.verticalLayout_2.addWidget(self.label_2)
+
+        self.label_3 = QLabel(self.widget_2)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMaximumSize(QSize(100, 100))
+        self.label_3.setPixmap(QPixmap(u":/icon/img/arrow.png"))
+        self.label_3.setScaledContents(True)
+
+        self.verticalLayout_2.addWidget(self.label_3)
+
+        self.icon = QLabel(self.widget_2)
         self.icon.setObjectName(u"icon")
         sizePolicy.setHeightForWidth(self.icon.sizePolicy().hasHeightForWidth())
         self.icon.setSizePolicy(sizePolicy)
@@ -36,7 +57,10 @@ class Ui_Dialog(object):
         self.icon.setScaledContents(True)
         self.icon.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
-        self.horizontalLayout_2.addWidget(self.icon)
+        self.verticalLayout_2.addWidget(self.icon)
+
+
+        self.horizontalLayout_2.addWidget(self.widget_2)
 
         self.frame = QFrame(Dialog)
         self.frame.setObjectName(u"frame")
@@ -98,6 +122,8 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Markdown", None))
+        self.label_2.setText("")
+        self.label_3.setText("")
         self.icon.setText("")
         self.text_input.setPlaceholderText(QCoreApplication.translate("Dialog", u"paste url", None))
         self.create_button.setText(QCoreApplication.translate("Dialog", u"create", None))

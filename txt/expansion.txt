@@ -1,18 +1,18 @@
 
 #web
-- YouTube
-- Vimeo
-- twitter
-- giphys
-- website
+- YouTube ✔
+- Vimeo ✔
+- twitter ✔
+- giphys 
+- website ✔
 
 # code
-- codepen
-- jsfiddle
-- GitHub ( complicated )
+- codepen ✔
+- jsfiddle ✔
+- GitHub ( complicated ) ✔
 
 # documents
-- google drive
+- google drive ✔
 - google pdf viewer
 
 # online tools
@@ -27,23 +27,6 @@
  
 # Webpages with IFRAME
 
-Youtube:
-Video Url: https://www.youtube.com/watch?v=a3HZ8S2H-GQ
-Iframe URL: 
-```
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a3HZ8S2H-GQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-```
-Twitter:
-URL: https://twitter.com/OlliLuksic/status/1380580489396940805
-Iframe: 
-```
-<iframe height="250" width="100%"
- src="https://twitframe.com/show?url=https://twitter.com/OlliLuksic/status/1380580489396940805"></iframe>
-```
-
-Codepen:
-URL : https://codepen.io/nohoid/pen/kIfto
-Iframe: <iframe height="265" style="width: 100%;" scrolling="no" title="Rainbow gradient background animation" src="https://codepen.io/nohoid/embed/kIfto?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
 Google Drive
 URL:	 https://drive.google.com/drive/folders/1FjG8bk9ozVuuPBKHqsX2-5sLytJPnAea
@@ -53,9 +36,6 @@ Sigma
 URL= https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File
 Iframe: <iframe src="https://www.figma.com/embed?embed_host=astra&url=https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File" width="100%" height="450px"></iframe>
 
-Website:
-URL=  https://en.wikipedia.org/wiki/Isopogon_anethifolius
-Iframe: <iframe src="https://en.wikipedia.org/wiki/Isopogon_anethifolius" height="450px" width="100%"></iframe>
 
 # Markdown Expansions
 Table: 

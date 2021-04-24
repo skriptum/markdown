@@ -86,14 +86,10 @@ def website_(url):
 #code embeds
 
 def codepen_(url):
-    ex = r"(?<protocol>http[s]?:\/\/)?(?<url>[^\/\s]+\/)(?<uri>.*)"
+    ex = r"((\/\/\/?|https?:\/\/)?(www\.)?codepen.io\/(?<author>.+)\/(?P<blob>pen+)\/(?<pen>.+([?#].*)?))"
     try:
         result = regex.search(ex, url).groupdict()
-        uri = result["uri"]
-
-        user , _ , pen = uri.split("/")
-        if not "codepen" in result["url"]:
-            raise InvalidURLError(url, "CodePen")
+        user , pen = result["author"], result["pen"]
     except Exception:
         raise InvalidURLError(url, "CodePen")
     
@@ -199,5 +195,27 @@ Gist [{filename}]({url}) by [{user}](https://github.com/{user})
     
     return files
 
+def decider_(url):
+    if "gist." in url:
+        return gist_(url)
+    if "github." in url:
+        return github_(url)
+    else:
+        raise InvalidURLError(url, "GitHub")
 
 #-----------------------------------------------------------------------------
+#documents
+
+def google_drive_(url):
+    ex = r"(?:https?:)?\/\/(?:(?P<service>drive|docs)\.)?google\.com\/(?P<type>[A-z0-9_-]+)\/(?P<blob>d+)\/(?P<id>[A-z0-9_-]+)?"
+    try:
+        result = regex.search(ex, url).groupdict()
+        id = result["id"]
+        service = result["service"]
+    except Exception:
+        raise InvalidURLError(url, "Google")
+
+    iframe = f"""
+<iframe src="https://drive.google.com/file/d/{id}/preview" width="100%" height="480" allowfullscrenn="True" frameborder="0"> <a href="{url}"> Google {service} File </a></iframe>
+"""
+    return iframe

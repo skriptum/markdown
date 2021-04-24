@@ -1,9 +1,22 @@
 <RCC>
-  <qresource prefix="icon">
+  <qresource prefix="/icon">
+    <file>img/arrow.png</file>
     <file alias="icon.png">img/icon.png</file>
     <file alias="markdown.png">img/markdown.png</file>
   </qresource>
-  <qresource prefix="lang">
+  <qresource prefix="/lang">
     <file alias="languages.json">languages.json</file>
+  </qresource>
+  <qresource prefix="/logos">
+    <file alias="codepen">img/codepen.png</file>
+    <file alias="github">img/github.png</file>
+    <file alias="drive">img/google_drive.png</file>
+    <file alias="jsfiddle">img/jsfiddle.png</file>
+    <file alias="latex">img/latex.png</file>
+    <file alias="map">img/map.png</file>
+    <file alias="twitter">img/twitter.png</file>
+    <file alias="vimeo">img/vimeo.png</file>
+    <file alias="website">img/website.png</file>
+    <file alias="youtube">img/youtube.png</file>
   </qresource>
 </RCC>

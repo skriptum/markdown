@@ -43,6 +43,7 @@ class DialogClass(QDialog, Ui_Dialog):
     def exec(self, service):
         self.service = service
         self.setWindowTitle(f"{service} to Markdown")
+        self.label_2.setPixmap(QPixmap(f":/logos/{service.lower()}"))
         self.exec_()
 
     def iframer(self, url):
@@ -62,8 +63,8 @@ class DialogClass(QDialog, Ui_Dialog):
             if self.service == "JSFiddle":
                 return jsfiddle_(url)
             if self.service == "GitHub":
-                return github_(url)
-            if self.service == "Gist":
-                return gist_(url)
+                return decider_(url)
+            if self.service == "Drive":
+                return google_drive_(url)
         except Exception as error:
             return str(error)
