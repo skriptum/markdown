@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>380</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="media_button">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+background:
+    qlineargradient(spread:pad, x1:0.118227, y1:0.130682, x2:0.823, y2:0.801136, stop:0 rgba(190, 80, 104, 255), stop:1 rgba(222, 61, 50, 255));
+
+border-radius:
+    15px;
+border-style:
+    solid;
+border-width:
+    0px;
+border-color: 
+    black}
+
+QPushButton:hover {
+background:
+qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:0 rgba(190, 80, 104, 255), stop:1 rgba(222, 61, 50, 255));
+border-right: 5px solid rgba(141, 31, 136, 217);
+border-bottom: 5px solid rgba(141, 31, 136, 217);
+}
+
+QPushButton:pressed {
+background: 
+qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:0 rgba(190, 0, 133, 255), stop:1 rgba(252, 50, 36, 255))
+
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Youtube</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

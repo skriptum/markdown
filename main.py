@@ -4,7 +4,7 @@ import sys
 
 # circular importing !
 from dialogclass import DialogClass
-from mainwindow import MainWindow
+from mainwindowclass import MainWindow
 
 #set up the app
 app = QApplication(sys.argv)
@@ -17,7 +17,7 @@ clipboard = app.clipboard() #needed in the dialog window class !
 
 #set up the windows
 app.dialog_window = DialogClass(clipboard)
-app.main_window = MainWindow()
+main_window = MainWindow()
 
 # Create the icon
 icon = QIcon(u":/icon/icon.png")
@@ -28,26 +28,8 @@ tray.setIcon(icon)
 tray.setVisible(True)
 
 # Create the menu
-menu = QMenu()
+shortcut_menu = QMenu("Embeds")
 
-
-#-----
-# services = ["Website","Youtube", "Twitter", "Vimeo", "GIPHY", "CodePen"]
-
-# action_list = []
-
-# for s in services:
-#     action = QAction(s)
-#     action.triggered.connect(lambda s=s:app.dialog_window.exec(s)) #named vairiable fixes !
-#       #not working, just last one
-
-#     action_list.append(action)
-
-# for i, ac in enumerate(action_list):
-#     menu.addAction(ac)
-#     if i in (0,4):
-#         menu.addSeparator()
-#-----
 
 #-------------------------------------------------------------------------------
 #create all actions
@@ -93,33 +75,54 @@ quit_action = QAction("Quit")
 quit_action.triggered.connect(app.quit)
 quit_action.setShortcut(QKeySequence("Ctrl+Q"))
 
-window_action = QAction("Open Window")
-window_action.triggered.connect(app.main_window.exec_)
+window_action = QAction("Open Help")
+window_action.triggered.connect(main_window.show)
+window_action.setShortcut(QKeySequence("Ctrl+H"))
 #-------------------------------------------------------------------------------
 
-#add actions to the menu
-menu.addAction(website_action)
-menu.addSeparator()
+#add actions to the shortcut menu
+shortcut_menu.addAction(website_action)
+shortcut_menu.addSeparator()
 
-menu.addAction(youtube_action)
-menu.addAction(twitter_action)
-menu.addAction(vimeo_action)
+shortcut_menu.addAction(youtube_action)
+shortcut_menu.addAction(twitter_action)
+shortcut_menu.addAction(vimeo_action)
 #menu.addAction(giphy_action)
-menu.addSeparator()
+shortcut_menu.addSeparator()
 
-menu.addAction(codepen_action)
-menu.addAction(jsfiddle_action)
-menu.addAction(github_action)
-menu.addSeparator()
+shortcut_menu.addAction(codepen_action)
+shortcut_menu.addAction(jsfiddle_action)
+shortcut_menu.addAction(github_action)
+shortcut_menu.addSeparator()
 
-menu.addAction(drive_action)
-menu.addSeparator()
+shortcut_menu.addAction(drive_action)
+shortcut_menu.addSeparator()
 
-menu.addAction(quit_action)
-menu.addAction(window_action)
+shortcut_menu.addAction(quit_action)
+shortcut_menu.addAction(window_action)
 
 # Add the menu to the tray
-tray.setContextMenu(menu)
+tray.setContextMenu(shortcut_menu)
+
+#create custom menu for the main window
+general_menu = QMenu("General Embeds")
+media_menu = QMenu("Media Embeds")
+code_menu = QMenu("Code Embeds")
+
+media_menu.addAction(youtube_action)
+media_menu.addAction(twitter_action)
+media_menu.addAction(vimeo_action)
+
+general_menu.addAction(website_action)
+general_menu.addAction(drive_action)
+
+code_menu.addAction(codepen_action)
+code_menu.addAction(jsfiddle_action)
+code_menu.addAction(github_action)
+
+main_window.bar.addMenu(general_menu)
+main_window.bar.addMenu(media_menu)
+main_window.bar.addMenu(code_menu)
 
 #-------------------------------------------------------------------------------
 # execute 
