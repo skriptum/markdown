@@ -1,27 +1,21 @@
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
+from mainwindow import Ui_MainWindow
 
-class ServiceButton(QPushButton):
-    def __init__(self, title, *args, **kwargs):
-        super(ServiceButton, self).__init__(*args, **kwargs)
-        
-        self.setAutoFillBackground(True)
 
-        self.setStyleSheet("style.qss")
+class MainWindow(QMainWindow, Ui_MainWindow):
 
-class MainWindow(QMainWindow):
-
-    def __init__(self, *args, **kwargs):
+    def __init__(self, dialog, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
 
-        self.setWindowTitle("RichMarkdown")
+        self.setupUi(self)
+
+        self.dialog = dialog
+
+        self.resize(400,400)
         self.bar = self.menuBar()
+        self.setWindowTitle("RichMark")
+        
 
-        layout = QGridLayout()
-        layout.addWidget(ServiceButton("Youtube"))
-        layout.addWidget(ServiceButton("Vimeo"))
-
-        central_widget = QWidget()
-        central_widget.setLayout(layout)
-        self.setCentralWidget(central_widget)
+        self.github_button.clicked.connect(lambda x: self.dialog.exec("GitHub"))

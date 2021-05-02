@@ -18,5 +18,6 @@
     <file alias="vimeo">img/vimeo.png</file>
     <file alias="website">img/website.png</file>
     <file alias="youtube">img/youtube.png</file>
+    <file alias="pdf">img/pdf.png</file>
   </qresource>
 </RCC>

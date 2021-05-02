@@ -28,9 +28,7 @@
 # Webpages with IFRAME
 
 
-Google Drive
-URL:	 https://drive.google.com/drive/folders/1FjG8bk9ozVuuPBKHqsX2-5sLytJPnAea
-Iframe: <iframe src="https://drive.google.com/embeddedfolderview?id=1FjG8bk9ozVuuPBKHqsX2-5sLytJPnAea#grid” style="width:100%; height:600px; border:0;"></iframe>
+
 
 Sigma
 URL= https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File

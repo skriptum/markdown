@@ -10,6 +10,8 @@ class DialogClass(QDialog, Ui_Dialog):
         super(DialogClass, self).__init__(*args, **kwargs)
         self.setupUi(self)
 
+        self.error_label.setVisible(False)
+
         # define the clipboard
         self.clipboard = clipboard
 
@@ -33,10 +35,15 @@ class DialogClass(QDialog, Ui_Dialog):
             bt = self.buttonBox.button(QDialogButtonBox.Save)
             bt.setEnabled(True)
             bt.setDefault(True)
+
+            self.text_ouput.setPlainText(txt)
+            self.error_label.setVisible(False)
+
         except Exception as Error:
             txt = str(Error)
+            self.error_label.setVisible(True)
+            self.error_label.setText(txt)
 
-        self.text_ouput.setPlainText(txt)
         self.text_input.clear()
 
     def save_to_clipboard(self):
@@ -50,6 +57,7 @@ class DialogClass(QDialog, Ui_Dialog):
 
     def cancel(self):
         self.text_ouput.setPlainText("")
+        self.error_label.setVisible(False)
         self.reject()
 
     def exec(self, service):

@@ -1,26 +1,8 @@
-from PySide6.QtGui import *
-from PySide6.QtWidgets import *
-import sys
 
-# circular importing !
-from dialogclass import DialogClass
-from mainwindowclass import MainWindow
+from PySide6.QtGui import QAction, QIcon
+from PySide6.QtWidgets import QMenu
 
-#set up the app
-app = QApplication(sys.argv)
-app.setApplicationName("Markdown")
-
-app.setQuitOnLastWindowClosed(False)
-app.setWindowIcon(QIcon(u":/icon/markdown.png"))
-
-clipboard = app.clipboard() #needed in the dialog window class !
-
-#set up the windows
-app.dialog_window = DialogClass(clipboard)
-main_window = MainWindow(app.dialog_window)
-
-#all actions stuff
-#-------------------------------------------------------------------------------
+from main import app
 
 # Create the icon
 icon = QIcon(u":/icon/icon.png")
@@ -83,7 +65,7 @@ quit_action.setShortcut(QKeySequence("Ctrl+Q"))
 
 window_action = QAction("Open Help")
 window_action.triggered.connect(main_window.show)
-window_action.setShortcut(QKeySequence("Ctrl+Shift+H"))
+window_action.setShortcut(QKeySequence("Ctrl+H"))
 #-------------------------------------------------------------------------------
 
 #add actions to the shortcut menu
@@ -126,8 +108,3 @@ tray.setContextMenu(shortcut_menu)
 main_window.bar.addMenu(general_menu)
 main_window.bar.addMenu(media_menu)
 main_window.bar.addMenu(code_menu)
-
-#-------------------------------------------------------------------------------
-# execute 
-sys.exit(app.exec_())
-

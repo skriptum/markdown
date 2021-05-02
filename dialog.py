@@ -95,6 +95,16 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addWidget(self.line)
 
+        self.error_label = QLabel(self.frame)
+        self.error_label.setObjectName(u"error_label")
+        self.error_label.setEnabled(True)
+        self.error_label.setStyleSheet(u"border: 2px solid rgba(200,0,0,1);\n"
+"border-radius: 5px;\n"
+"background: rgba(255, 38, 36, 162);\n"
+"color: white;")
+
+        self.verticalLayout.addWidget(self.error_label)
+
         self.text_ouput = QTextBrowser(self.frame)
         self.text_ouput.setObjectName(u"text_ouput")
 
@@ -127,6 +137,7 @@ class Ui_Dialog(object):
         self.icon.setText("")
         self.text_input.setPlaceholderText(QCoreApplication.translate("Dialog", u"paste url", None))
         self.create_button.setText(QCoreApplication.translate("Dialog", u"create", None))
+        self.error_label.setText("")
         self.label.setText(QCoreApplication.translate("Dialog", u"when pressing save, it is stored in your clipboard", None))
     # retranslateUi
 
