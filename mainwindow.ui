@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>604</width>
-    <height>510</height>
+    <width>442</width>
+    <height>594</height>
    </rect>
   </property>
   <property name="cursor">
@@ -16,25 +16,159 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background: qlineargradient(spread:pad, x1:0.798148, y1:0.840909, x2:0.157975, y2:0.0684545, stop:0 rgba(197, 68, 68, 255), stop:0.995074 rgba(235, 212, 210, 255));
+color: black;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QWidget" name="widget" native="true">
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="1">
-        <widget class="QPushButton" name="vimeo_button">
+     <widget class="QWidget" name="logo_widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">background:none;</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="icon_label">
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Avenir</family>
+           <pointsize>30</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;
+text-transform: uppercase;
+font-size: 30pt;
+background: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="resources.qrc">:/icon/markdown.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="text_label">
+         <property name="font">
+          <font>
+           <family>Avenir</family>
+           <pointsize>30</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;
+text-transform: uppercase;
+font-size: 30pt;
+background: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Richmark</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="github_widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">background: white;
+border-radius: 25px;</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="github_text">
+         <property name="font">
+          <font>
+           <family>Avenir</family>
+           <pointsize>20</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;
+text-transform: uppercase;
+font-size: 20pt;
+color: black;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Github to Markdown</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="github_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>100</width>
            <height>100</height>
           </size>
          </property>
+         <property name="statusTip">
+          <string>GitHub</string>
+         </property>
          <property name="styleSheet">
           <string notr="true">
 QPushButton {
 background:
-qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:0 rgba(116, 171, 241, 255), stop:1 rgba(39, 44, 172, 255));
-qproperty-icon: url(:/logos/vimeo);
+qlineargradient(spread:pad, x1:0.881892, y1:0.869318, x2:0.281128, y2:0.398, stop:0 rgba(105, 105, 105, 255), stop:1 rgba(235, 235, 235, 255));
+qproperty-icon: url(:/logos/github);
 
 border-radius:
     15px;
@@ -52,11 +186,11 @@ border-bottom: 5px solid black;
 
 QPushButton:pressed {
 background: 
-qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:1 rgba(116, 171, 241, 255), stop:0 rgba(39, 44, 172, 255));
+qlineargradient(spread:pad, x1:0.881892, y1:0.869318, x2:0.281128, y2:0.398, stop:1 rgba(105, 105, 105, 255), stop:0 rgba(235, 235, 235, 255));
 }</string>
          </property>
          <property name="text">
-          <string/>
+          <string notr="true"/>
          </property>
          <property name="iconSize">
           <size>
@@ -64,14 +198,45 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
            <height>50</height>
           </size>
          </property>
+         <property name="shortcut">
+          <string>Ctrl+G</string>
+         </property>
         </widget>
        </item>
-       <item row="0" column="2">
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="service_widget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:  white;
+color: black;
+border-radius: 25px;
+
+border-top-left-radius:
+    25px;
+border-top-right-radius:
+    25px;</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="2">
         <widget class="QPushButton" name="youtube_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>80</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -111,12 +276,41 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
          </property>
         </widget>
        </item>
-       <item row="2" column="2">
-        <widget class="QPushButton" name="map_button">
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <family>Avenir</family>
+           <pointsize>20</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;
+text-transform: uppercase;
+font-size: 20pt;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>All Services</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="drive_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>80</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -124,8 +318,8 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
 
 QPushButton {
 background:
-qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:0 rgba(190, 170, 80, 255), stop:1 rgba(222, 115, 0, 255));
-qproperty-icon: url(:/logos/map);
+    qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.157975, y2:0.170455, stop:0 rgba(120, 190, 0, 255), stop:1 rgba(17, 107, 118, 255));
+qproperty-icon: url(:/logos/drive);
 
 border-radius:
     15px;
@@ -143,7 +337,7 @@ border-bottom: 5px solid black;
 
 QPushButton:pressed {
 background: 
-qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:1 rgba(190, 170, 80, 255), stop:0 rgba(222, 115, 0, 255));
+qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.157975, y2:0.170455, stop:1 rgba(120, 190, 0, 255), stop:0 rgba(17, 107, 118, 255));
 }</string>
          </property>
          <property name="text">
@@ -154,32 +348,30 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
            <width>50</width>
            <height>50</height>
           </size>
-         </property>
-         <property name="checkable">
-          <bool>false</bool>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QPushButton" name="website_button">
-         <property name="enabled">
-          <bool>true</bool>
+        <widget class="QPushButton" name="vimeo_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
          </property>
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>80</height>
           </size>
-         </property>
-         <property name="autoFillBackground">
-          <bool>false</bool>
          </property>
          <property name="styleSheet">
           <string notr="true">
-QPushButton  {
+QPushButton {
 background:
-qlineargradient(spread:pad, x1:1, y1:0.511364, x2:0, y2:0.52841, stop:0 rgba(167, 99, 99, 255), stop:0.995074 rgba(45, 60, 98, 255));
-qproperty-icon: url(:/logos/website);
+qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:0 rgba(116, 171, 241, 255), stop:1 rgba(39, 44, 172, 255));
+qproperty-icon: url(:/logos/vimeo);
+
 border-radius:
     15px;
 border-style:
@@ -196,7 +388,7 @@ border-bottom: 5px solid black;
 
 QPushButton:pressed {
 background: 
-qlineargradient(spread:pad, x1:1, y1:0.511364, x2:0, y2:0.52841, stop:1 rgba(167, 99, 99, 255), stop:0 rgba(45, 60, 98, 255));
+qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:1 rgba(116, 171, 241, 255), stop:0 rgba(39, 44, 172, 255));
 }</string>
          </property>
          <property name="text">
@@ -210,12 +402,18 @@ qlineargradient(spread:pad, x1:1, y1:0.511364, x2:0, y2:0.52841, stop:1 rgba(167
          </property>
         </widget>
        </item>
-       <item row="0" column="3">
+       <item row="1" column="3">
         <widget class="QPushButton" name="twitter_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>80</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -255,15 +453,21 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
          </property>
         </widget>
        </item>
-       <item row="2" column="3">
+       <item row="3" column="2">
         <widget class="QPushButton" name="pdf_button">
          <property name="enabled">
           <bool>true</bool>
          </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>80</height>
           </size>
          </property>
          <property name="autoFillBackground">
@@ -309,58 +513,18 @@ background:
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
-        <widget class="QPushButton" name="drive_button">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-
-QPushButton {
-background:
-    qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.157975, y2:0.170455, stop:0 rgba(120, 190, 0, 255), stop:1 rgba(17, 107, 118, 255));
-qproperty-icon: url(:/logos/drive);
-
-border-radius:
-    15px;
-border-style:
-    solid;
-border-width:
-    0px;
-border-color: 
-    black}
-
-QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
-}
-
-QPushButton:pressed {
-background: 
-qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.157975, y2:0.170455, stop:1 rgba(120, 190, 0, 255), stop:0 rgba(17, 107, 118, 255));
-}</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="3">
+       <item row="4" column="1">
         <widget class="QPushButton" name="codepen_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>80</height>
           </size>
          </property>
          <property name="toolTip">
@@ -406,12 +570,74 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
          </property>
         </widget>
        </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="jsfiddle_button">
+       <item row="3" column="3">
+        <widget class="QPushButton" name="website_button">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>120</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QPushButton  {
+background:
+qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:0 rgba(190, 170, 80, 255), stop:1 rgba(222, 115, 0, 255));
+qproperty-icon: url(:/logos/website);
+border-radius:
+    15px;
+border-style:
+    solid;
+border-width:
+    0px;
+border-color: 
+    black}
+
+QPushButton:hover {
+border-right: 5px solid black; 
+border-bottom: 5px solid black;
+}
+
+QPushButton:pressed {
+background: 
+qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:1 rgba(190, 170, 80, 255), stop:0 rgba(222, 115, 0, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QPushButton" name="jsfiddle_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>80</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -454,65 +680,12 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
       </layout>
      </widget>
     </item>
-    <item>
-     <widget class="QWidget" name="widget_2" native="true">
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QPushButton" name="github_button">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="statusTip">
-          <string>GitHub</string>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-QPushButton {
-background:
-qlineargradient(spread:pad, x1:0.812808, y1:0.835, x2:0, y2:0.0227277, stop:0 rgba(173, 173, 173, 255), stop:1 rgba(0, 0, 0, 255));
-qproperty-icon: url(:/logos/github);
-
-border-radius:
-    15px;
-border-style:
-    solid;
-border-width:
-    0px;
-border-color: 
-    black}
-
-QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
-}
-
-QPushButton:pressed {
-background: 
-qlineargradient(spread:pad, x1:0.812808, y1:0.835, x2:0, y2:0.0227277, stop:1 rgba(173, 173, 173, 255), stop:0 rgba(0, 0, 0, 255));
-}</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
    </layout>
   </widget>
  </widget>
  <resources>
   <include location="resources.qrc"/>
+  <include location="../../.designer/backup/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

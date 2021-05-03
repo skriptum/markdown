@@ -2,7 +2,7 @@ import regex
 
 class InvalidURLError(Exception):
     def __init__(self, url, service):
-        self.message = f" '{url}' is not a valid {service} URL, please input another"
+        self.message = f" This is not a valid {service} URL"
         super().__init__(self.message)
 
 #-----------------------------------------------------------------------------
