@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>442</width>
-    <height>594</height>
+    <height>425</height>
    </rect>
   </property>
   <property name="cursor">
@@ -17,8 +17,9 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: qlineargradient(spread:pad, x1:0.798148, y1:0.840909, x2:0.157975, y2:0.0684545, stop:0 rgba(197, 68, 68, 255), stop:0.995074 rgba(235, 212, 210, 255));
-color: black;</string>
+   <string notr="true">
+background: qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.0791577, y2:0.125, stop:1 rgb(240,240,240), stop:0 rgb(210, 210, 210));
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -40,6 +41,37 @@ color: black;</string>
        <property name="bottomMargin">
         <number>0</number>
        </property>
+       <item>
+        <widget class="QLabel" name="text_label">
+         <property name="font">
+          <font>
+           <family>Avenir</family>
+           <pointsize>30</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;
+text-transform: uppercase;
+font-size: 30pt;
+background: none;
+color: black</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Richmark</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
        <item>
         <widget class="QLabel" name="icon_label">
          <property name="maximumSize">
@@ -82,127 +114,6 @@ background: none;</string>
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QLabel" name="text_label">
-         <property name="font">
-          <font>
-           <family>Avenir</family>
-           <pointsize>30</pointsize>
-           <italic>false</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;
-text-transform: uppercase;
-font-size: 30pt;
-background: none;</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="text">
-          <string>Richmark</string>
-         </property>
-         <property name="textFormat">
-          <enum>Qt::AutoText</enum>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QWidget" name="github_widget" native="true">
-      <property name="styleSheet">
-       <string notr="true">background: white;
-border-radius: 25px;</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QLabel" name="github_text">
-         <property name="font">
-          <font>
-           <family>Avenir</family>
-           <pointsize>20</pointsize>
-           <italic>false</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;
-text-transform: uppercase;
-font-size: 20pt;
-color: black;</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="text">
-          <string>Github to Markdown</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="github_button">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="statusTip">
-          <string>GitHub</string>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-QPushButton {
-background:
-qlineargradient(spread:pad, x1:0.881892, y1:0.869318, x2:0.281128, y2:0.398, stop:0 rgba(105, 105, 105, 255), stop:1 rgba(235, 235, 235, 255));
-qproperty-icon: url(:/logos/github);
-
-border-radius:
-    15px;
-border-style:
-    solid;
-border-width:
-    0px;
-border-color: 
-    black}
-
-QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
-}
-
-QPushButton:pressed {
-background: 
-qlineargradient(spread:pad, x1:0.881892, y1:0.869318, x2:0.281128, y2:0.398, stop:1 rgba(105, 105, 105, 255), stop:0 rgba(235, 235, 235, 255));
-}</string>
-         </property>
-         <property name="text">
-          <string notr="true"/>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>50</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="shortcut">
-          <string>Ctrl+G</string>
-         </property>
-        </widget>
-       </item>
       </layout>
      </widget>
     </item>
@@ -215,14 +126,11 @@ qlineargradient(spread:pad, x1:0.881892, y1:0.869318, x2:0.281128, y2:0.398, sto
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">background:  white;
+       <string notr="true">background-color:  white;
 color: black;
-border-radius: 25px;
+border-radius: 10px;
 
-border-top-left-radius:
-    25px;
-border-top-right-radius:
-    25px;</string>
+</string>
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="1" column="2">
@@ -247,7 +155,7 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
 qproperty-icon: url(:/logos/youtube);
 
 border-radius:
-    15px;
+    10px;
 border-style:
     solid;
 border-width:
@@ -256,8 +164,8 @@ border-color:
     black}
 
 QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
+border-right: 3px solid black; 
+border-bottom: 3px solid black;
 }
 
 QPushButton:pressed {
@@ -273,29 +181,6 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
            <width>50</width>
            <height>50</height>
           </size>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="label_2">
-         <property name="font">
-          <font>
-           <family>Avenir</family>
-           <pointsize>20</pointsize>
-           <italic>false</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: none;
-text-transform: uppercase;
-font-size: 20pt;</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="text">
-          <string>All Services</string>
          </property>
         </widget>
        </item>
@@ -322,7 +207,7 @@ background:
 qproperty-icon: url(:/logos/drive);
 
 border-radius:
-    15px;
+    10px;
 border-style:
     solid;
 border-width:
@@ -331,8 +216,8 @@ border-color:
     black}
 
 QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
+border-right: 3px solid black; 
+border-bottom: 3px solid black;
 }
 
 QPushButton:pressed {
@@ -373,7 +258,7 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
 qproperty-icon: url(:/logos/vimeo);
 
 border-radius:
-    15px;
+    10px;
 border-style:
     solid;
 border-width:
@@ -382,8 +267,8 @@ border-color:
     black}
 
 QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
+border-right: 3px solid black; 
+border-bottom: 3px solid black;
 }
 
 QPushButton:pressed {
@@ -424,7 +309,7 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
 qproperty-icon: url(:/logos/twitter);
 
 border-radius:
-    15px;
+    10px;
 border-style:
     solid;
 border-width:
@@ -433,8 +318,8 @@ border-color:
     black}
 
 QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
+border-right: 3px solid black; 
+border-bottom: 3px solid black;
 }
 
 QPushButton:pressed {
@@ -480,7 +365,7 @@ background:
     qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:0 rgba(80, 96, 190, 255), stop:1 rgba(216, 50, 222, 255));
 qproperty-icon: url(:/logos/pdf);
 border-radius:
-    15px;
+    10px;
 border-style:
     solid;
 border-width:
@@ -489,8 +374,8 @@ border-color:
     black}
 
 QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
+border-right: 3px solid black; 
+border-bottom: 3px solid black;
 }
 
 QPushButton:pressed {
@@ -541,7 +426,7 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
 qproperty-icon: url(:/logos/codepen);
 
 border-radius:
-    15px;
+    10px;
 border-style:
     solid;
 border-width:
@@ -550,8 +435,8 @@ border-color:
     black}
 
 QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
+border-right: 3px solid black; 
+border-bottom: 3px solid black;
 }
 
 QPushButton:pressed {
@@ -597,7 +482,7 @@ background:
 qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, stop:0 rgba(190, 170, 80, 255), stop:1 rgba(222, 115, 0, 255));
 qproperty-icon: url(:/logos/website);
 border-radius:
-    15px;
+    10px;
 border-style:
     solid;
 border-width:
@@ -606,8 +491,8 @@ border-color:
     black}
 
 QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
+border-right: 3px solid black; 
+border-bottom: 3px solid black;
 }
 
 QPushButton:pressed {
@@ -648,7 +533,7 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
 qproperty-icon: url(:/logos/jsfiddle);
 
 border-radius:
-    15px;
+    10px;
 border-style:
     solid;
 border-width:
@@ -657,8 +542,8 @@ border-color:
     black}
 
 QPushButton:hover {
-border-right: 5px solid black; 
-border-bottom: 5px solid black;
+border-right: 3px solid black; 
+border-bottom: 3px solid black;
 }
 
 QPushButton:pressed {
@@ -677,6 +562,93 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
          </property>
         </widget>
        </item>
+       <item row="4" column="3">
+        <widget class="QPushButton" name="github_button">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="statusTip">
+          <string>GitHub</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QPushButton {
+background:
+qlineargradient(spread:pad, x1:0.881892, y1:0.869318, x2:0.281128, y2:0.398, stop:0 rgba(105, 105, 105, 255), stop:1 rgba(235, 235, 235, 255));
+qproperty-icon: url(:/logos/github);
+
+border-radius:
+    10px;
+border-style:
+    solid;
+border-width:
+    0px;
+border-color: 
+    black}
+
+QPushButton:hover {
+border-right: 3px solid black; 
+border-bottom: 3px solid black;
+}
+
+QPushButton:pressed {
+background: 
+qlineargradient(spread:pad, x1:0.881892, y1:0.869318, x2:0.281128, y2:0.398, stop:1 rgba(105, 105, 105, 255), stop:0 rgba(235, 235, 235, 255));
+}</string>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="shortcut">
+          <string>Ctrl+G</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Avenir</family>
+           <pointsize>20</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;
+text-transform: uppercase;
+font-size: 20pt;
+background: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Services</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -685,7 +657,7 @@ qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.138271, y2:0.170455, 
  </widget>
  <resources>
   <include location="resources.qrc"/>
-  <include location="../../.designer/backup/resources.qrc"/>
+  <include location="resources.qrc"/>
  </resources>
  <connections/>
 </ui>

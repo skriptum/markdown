@@ -9,12 +9,15 @@ class DialogClass(QDialog, Ui_Dialog):
         """ set up a dialog , needs a clipboard"""
         super(DialogClass, self).__init__(*args, **kwargs)
         self.setupUi(self)
+        self.setWindowFlags(Qt.WindowStaysOnTopHint)
 
+        #set the red error label to invisble
         self.error_label.setVisible(False)
 
         # define the clipboard
         self.clipboard = clipboard
 
+        #connect the buttons
         self.buttonBox.rejected.connect(self.cancel)
         self.buttonBox.accepted.connect(self.save_to_clipboard)
 
@@ -24,6 +27,7 @@ class DialogClass(QDialog, Ui_Dialog):
         self.create_button.setDefault(True)
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
 
+    #function for the working of the URLs
     def io_url(self):
         url = self.text_input.text()
 
@@ -39,6 +43,7 @@ class DialogClass(QDialog, Ui_Dialog):
             self.text_ouput.setPlainText(txt)
             self.error_label.setVisible(False)
 
+        #show the error label
         except Exception as Error:
             txt = str(Error)
             self.error_label.setVisible(True)
@@ -46,6 +51,7 @@ class DialogClass(QDialog, Ui_Dialog):
 
         self.text_input.clear()
 
+    #get the text, save it and clear everything and close
     def save_to_clipboard(self):
         txt = self.text_ouput.toPlainText()
         if len(txt) == 0:
@@ -55,17 +61,23 @@ class DialogClass(QDialog, Ui_Dialog):
         self.text_ouput.clear()
         self.close()
 
+    #on cancel buttn press clear the output, hide the error label and close
     def cancel(self):
         self.text_ouput.setPlainText("")
         self.error_label.setVisible(False)
         self.reject()
 
+    #execute the window and style it with title and icon according to Service
     def exec(self, service):
         self.service = service
         self.setWindowTitle(f"{service} to Markdown")
         self.label_2.setPixmap(QPixmap(f":/logos/{service.lower()}"))
+
+        self.error_label.setVisible(False)
+        
         self.exec_()
 
+    #call the corresponding function to a Service
     def iframer(self, url):
     
         if self.service == "Youtube":
@@ -86,3 +98,5 @@ class DialogClass(QDialog, Ui_Dialog):
             return decider_(url)
         if self.service == "Drive":
             return google_drive_(url)
+        if self.service == "PDF":
+            return pdf_(url)

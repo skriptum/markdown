@@ -196,12 +196,16 @@ Gist [{filename}]({url}) by [{user}](https://github.com/{user})
     return files
 
 def decider_(url):
-    if "gist." in url:
+    try:
         return gist_(url)
-    if "github." in url:
         return github_(url)
-    else:
+        
+    #catch errors from wrong url
+    except InvalidURLError:
         raise InvalidURLError(url, "GitHub")
+    #check for errors coming from no internet connectio 
+    except requests.exceptions.ConnectionError as e:
+        raise Exception("No Response, check Connection")
 
 #-----------------------------------------------------------------------------
 #documents

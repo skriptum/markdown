@@ -17,7 +17,9 @@ clipboard = app.clipboard() #needed in the dialog window class !
 
 #set up the windows
 app.dialog_window = DialogClass(clipboard)
+
 main_window = MainWindow(app.dialog_window)
+
 
 #all actions stuff
 #-------------------------------------------------------------------------------
