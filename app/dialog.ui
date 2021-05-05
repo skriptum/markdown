@@ -168,7 +168,7 @@ color: white;</string>
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>when pressing save, it is stored in your clipboard</string>
+         <string>Save stores the Output in your Clipboard</string>
         </property>
        </widget>
       </item>

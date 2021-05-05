@@ -17,8 +17,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.resize(400,400)
         self.bar = self.menuBar()
         self.setWindowTitle("RichMark")
-        
-
 
         #connect all the buttons
         self.github_button.clicked.connect(lambda x: self.dialog.exec("GitHub"))

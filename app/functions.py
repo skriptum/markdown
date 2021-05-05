@@ -223,3 +223,14 @@ def google_drive_(url):
 <iframe src="https://drive.google.com/file/d/{id}/preview" width="100%" height="480" allowfullscrenn="True" frameborder="0"> <a href="{url}"> Google {service} File </a></iframe>
 """
     return iframe
+
+def pdf_(url):
+    ex = r".+\.pdf$"
+    try:
+        regex.search(ex, url)[0]
+    except:
+        raise InvalidURLError(url, "Document")
+    iframe=f"""
+<iframe src="https://docs.google.com/viewer?url={url}&embedded=true" width="100%" height=450 frameborder="0"><a href={url}>Online Document</a></iframe>
+"""
+    return iframe

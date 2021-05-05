@@ -138,6 +138,6 @@ class Ui_Dialog(object):
         self.text_input.setPlaceholderText(QCoreApplication.translate("Dialog", u"paste url", None))
         self.create_button.setText(QCoreApplication.translate("Dialog", u"create", None))
         self.error_label.setText("")
-        self.label.setText(QCoreApplication.translate("Dialog", u"when pressing save, it is stored in your clipboard", None))
+        self.label.setText(QCoreApplication.translate("Dialog", u"Save stores the Output in your Clipboard", None))
     # retranslateUi
 

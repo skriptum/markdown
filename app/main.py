@@ -21,6 +21,9 @@ app.dialog_window = DialogClass(clipboard)
 main_window = MainWindow(app.dialog_window)
 
 
+
+
+
 #all actions stuff
 #-------------------------------------------------------------------------------
 
@@ -77,15 +80,18 @@ drive_action = QAction("Google Drive")
 drive_action.triggered.connect(lambda x:app.dialog_window.exec("Drive"))
 drive_action.setIcon(QIcon(u":/logos/drive"))
 
+pdf_action = QAction("PDF")
+pdf_action.triggered.connect(lambda x:app.dialog_window.exec("PDF"))
+pdf_action.setIcon(QIcon(u":/logos/pdf"))
 
 # Add a Quit option to the menu.
 quit_action = QAction("Quit")
 quit_action.triggered.connect(app.quit)
 quit_action.setShortcut(QKeySequence("Ctrl+Q"))
 
-window_action = QAction("Open Help")
+window_action = QAction("Open Window")
 window_action.triggered.connect(main_window.show)
-window_action.setShortcut(QKeySequence("Ctrl+Shift+H"))
+window_action.setShortcut(QKeySequence("Ctrl+O"))
 #-------------------------------------------------------------------------------
 
 #add actions to the shortcut menu
@@ -104,18 +110,20 @@ shortcut_menu.addAction(github_action)
 shortcut_menu.addSeparator()
 
 shortcut_menu.addAction(drive_action)
+shortcut_menu.addAction(pdf_action)
 shortcut_menu.addSeparator()
 
-shortcut_menu.addAction(quit_action)
 shortcut_menu.addAction(window_action)
+shortcut_menu.addAction(quit_action)
 
-
+# add actions to the window menu
 media_menu.addAction(youtube_action)
 media_menu.addAction(twitter_action)
 media_menu.addAction(vimeo_action)
 
 general_menu.addAction(website_action)
 general_menu.addAction(drive_action)
+general_menu.addAction(pdf_action)
 
 code_menu.addAction(codepen_action)
 code_menu.addAction(jsfiddle_action)
@@ -128,6 +136,11 @@ tray.setContextMenu(shortcut_menu)
 main_window.bar.addMenu(general_menu)
 main_window.bar.addMenu(media_menu)
 main_window.bar.addMenu(code_menu)
+
+
+
+
+
 
 #-------------------------------------------------------------------------------
 # execute 
