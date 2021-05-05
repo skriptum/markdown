@@ -1,6 +1,6 @@
 
-from PySide6.QtGui import QAction, QIcon
-from PySide6.QtWidgets import QMenu
+from PySide2.QtGui import QAction, QIcon
+from PySide2.QtWidgets import QMenu
 
 from main import app
 

@@ -1,5 +1,5 @@
-from PySide6.QtGui import *
-from PySide6.QtWidgets import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
 import sys
 
 # circular importing !
@@ -11,7 +11,7 @@ app = QApplication(sys.argv)
 app.setApplicationName("Markdown")
 
 app.setQuitOnLastWindowClosed(False)
-app.setWindowIcon(QIcon(u":/icon/markdown.png"))
+app.setWindowIcon(QIcon(u":/icon/icon"))
 
 clipboard = app.clipboard() #needed in the dialog window class !
 
@@ -28,7 +28,7 @@ main_window = MainWindow(app.dialog_window)
 #-------------------------------------------------------------------------------
 
 # Create the icon
-icon = QIcon(u":/icon/icon.png")
+icon = QIcon(u":/icon/logo_white")
 
 # Create the tray
 tray = QSystemTrayIcon()

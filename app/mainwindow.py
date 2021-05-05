@@ -3,23 +3,22 @@
 ################################################################################
 ## Form generated from reading UI file 'mainwindow.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.0.2
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *
-from PySide6.QtGui import *
-from PySide6.QtWidgets import *
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
 
-import resources_rc
 import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(442, 425)
+        MainWindow.resize(428, 479)
         MainWindow.setCursor(QCursor(Qt.ArrowCursor))
         MainWindow.setStyleSheet(u"\n"
 "background: qlineargradient(spread:pad, x1:0.896552, y1:0.903409, x2:0.0791577, y2:0.125, stop:1 rgb(240,240,240), stop:0 rgb(210, 210, 210));\n"
@@ -30,12 +29,23 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.logo_widget = QWidget(self.centralwidget)
         self.logo_widget.setObjectName(u"logo_widget")
+        self.logo_widget.setEnabled(True)
         self.logo_widget.setStyleSheet(u"background:none;")
         self.horizontalLayout = QHBoxLayout(self.logo_widget)
+#ifndef Q_OS_MAC
+        self.horizontalLayout.setSpacing(-1)
+#endif
         self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setSizeConstraint(QLayout.SetFixedSize)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.text_label = QLabel(self.logo_widget)
         self.text_label.setObjectName(u"text_label")
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.text_label.sizePolicy().hasHeightForWidth())
+        self.text_label.setSizePolicy(sizePolicy)
+        self.text_label.setMaximumSize(QSize(280, 100))
         font = QFont()
         font.setFamily(u"Avenir")
         font.setPointSize(30)
@@ -45,40 +55,25 @@ class Ui_MainWindow(object):
         self.text_label.setStyleSheet(u"border: none;\n"
 "text-transform: uppercase;\n"
 "font-size: 30pt;\n"
-"background: none;\n"
-"color: black")
+"background: none;")
         self.text_label.setFrameShape(QFrame.NoFrame)
         self.text_label.setTextFormat(Qt.AutoText)
-        self.text_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.text_label.setPixmap(QPixmap(u":/icon/img/font_transp.png"))
+        self.text_label.setScaledContents(True)
+        self.text_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
         self.horizontalLayout.addWidget(self.text_label)
-
-        self.icon_label = QLabel(self.logo_widget)
-        self.icon_label.setObjectName(u"icon_label")
-        self.icon_label.setMaximumSize(QSize(70, 70))
-        self.icon_label.setFont(font)
-        self.icon_label.setStyleSheet(u"border: none;\n"
-"text-transform: uppercase;\n"
-"font-size: 30pt;\n"
-"background: none;")
-        self.icon_label.setFrameShape(QFrame.NoFrame)
-        self.icon_label.setTextFormat(Qt.AutoText)
-        self.icon_label.setPixmap(QPixmap(u":/icon/markdown.png"))
-        self.icon_label.setScaledContents(True)
-        self.icon_label.setAlignment(Qt.AlignRight|Qt.AlignTop|Qt.AlignTrailing)
-
-        self.horizontalLayout.addWidget(self.icon_label)
 
 
         self.verticalLayout.addWidget(self.logo_widget)
 
         self.service_widget = QWidget(self.centralwidget)
         self.service_widget.setObjectName(u"service_widget")
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.service_widget.sizePolicy().hasHeightForWidth())
-        self.service_widget.setSizePolicy(sizePolicy)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.MinimumExpanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.service_widget.sizePolicy().hasHeightForWidth())
+        self.service_widget.setSizePolicy(sizePolicy1)
         self.service_widget.setStyleSheet(u"background-color:  white;\n"
 "color: black;\n"
 "border-radius: 10px;\n"
@@ -88,11 +83,11 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName(u"gridLayout")
         self.youtube_button = QPushButton(self.service_widget)
         self.youtube_button.setObjectName(u"youtube_button")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.youtube_button.sizePolicy().hasHeightForWidth())
-        self.youtube_button.setSizePolicy(sizePolicy1)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.youtube_button.sizePolicy().hasHeightForWidth())
+        self.youtube_button.setSizePolicy(sizePolicy2)
         self.youtube_button.setMinimumSize(QSize(120, 80))
         self.youtube_button.setStyleSheet(u"\n"
 "QPushButton {\n"
@@ -124,8 +119,8 @@ class Ui_MainWindow(object):
 
         self.drive_button = QPushButton(self.service_widget)
         self.drive_button.setObjectName(u"drive_button")
-        sizePolicy1.setHeightForWidth(self.drive_button.sizePolicy().hasHeightForWidth())
-        self.drive_button.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.drive_button.sizePolicy().hasHeightForWidth())
+        self.drive_button.setSizePolicy(sizePolicy2)
         self.drive_button.setMinimumSize(QSize(120, 80))
         self.drive_button.setStyleSheet(u"\n"
 "\n"
@@ -158,8 +153,8 @@ class Ui_MainWindow(object):
 
         self.vimeo_button = QPushButton(self.service_widget)
         self.vimeo_button.setObjectName(u"vimeo_button")
-        sizePolicy1.setHeightForWidth(self.vimeo_button.sizePolicy().hasHeightForWidth())
-        self.vimeo_button.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.vimeo_button.sizePolicy().hasHeightForWidth())
+        self.vimeo_button.setSizePolicy(sizePolicy2)
         self.vimeo_button.setMinimumSize(QSize(120, 80))
         self.vimeo_button.setStyleSheet(u"\n"
 "QPushButton {\n"
@@ -191,8 +186,8 @@ class Ui_MainWindow(object):
 
         self.twitter_button = QPushButton(self.service_widget)
         self.twitter_button.setObjectName(u"twitter_button")
-        sizePolicy1.setHeightForWidth(self.twitter_button.sizePolicy().hasHeightForWidth())
-        self.twitter_button.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.twitter_button.sizePolicy().hasHeightForWidth())
+        self.twitter_button.setSizePolicy(sizePolicy2)
         self.twitter_button.setMinimumSize(QSize(120, 80))
         self.twitter_button.setStyleSheet(u"\n"
 "QPushButton {\n"
@@ -225,8 +220,8 @@ class Ui_MainWindow(object):
         self.pdf_button = QPushButton(self.service_widget)
         self.pdf_button.setObjectName(u"pdf_button")
         self.pdf_button.setEnabled(True)
-        sizePolicy1.setHeightForWidth(self.pdf_button.sizePolicy().hasHeightForWidth())
-        self.pdf_button.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.pdf_button.sizePolicy().hasHeightForWidth())
+        self.pdf_button.setSizePolicy(sizePolicy2)
         self.pdf_button.setMinimumSize(QSize(120, 80))
         self.pdf_button.setAutoFillBackground(False)
         self.pdf_button.setStyleSheet(u"\n"
@@ -259,8 +254,8 @@ class Ui_MainWindow(object):
 
         self.codepen_button = QPushButton(self.service_widget)
         self.codepen_button.setObjectName(u"codepen_button")
-        sizePolicy1.setHeightForWidth(self.codepen_button.sizePolicy().hasHeightForWidth())
-        self.codepen_button.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.codepen_button.sizePolicy().hasHeightForWidth())
+        self.codepen_button.setSizePolicy(sizePolicy2)
         self.codepen_button.setMinimumSize(QSize(120, 80))
         self.codepen_button.setStyleSheet(u"\n"
 "QPushButton {\n"
@@ -293,8 +288,8 @@ class Ui_MainWindow(object):
         self.website_button = QPushButton(self.service_widget)
         self.website_button.setObjectName(u"website_button")
         self.website_button.setEnabled(True)
-        sizePolicy1.setHeightForWidth(self.website_button.sizePolicy().hasHeightForWidth())
-        self.website_button.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.website_button.sizePolicy().hasHeightForWidth())
+        self.website_button.setSizePolicy(sizePolicy2)
         self.website_button.setMinimumSize(QSize(120, 80))
         self.website_button.setAutoFillBackground(False)
         self.website_button.setStyleSheet(u"\n"
@@ -326,8 +321,8 @@ class Ui_MainWindow(object):
 
         self.jsfiddle_button = QPushButton(self.service_widget)
         self.jsfiddle_button.setObjectName(u"jsfiddle_button")
-        sizePolicy1.setHeightForWidth(self.jsfiddle_button.sizePolicy().hasHeightForWidth())
-        self.jsfiddle_button.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.jsfiddle_button.sizePolicy().hasHeightForWidth())
+        self.jsfiddle_button.setSizePolicy(sizePolicy2)
         self.jsfiddle_button.setMinimumSize(QSize(120, 80))
         self.jsfiddle_button.setStyleSheet(u"\n"
 "QPushButton {\n"
@@ -359,8 +354,8 @@ class Ui_MainWindow(object):
 
         self.github_button = QPushButton(self.service_widget)
         self.github_button.setObjectName(u"github_button")
-        sizePolicy1.setHeightForWidth(self.github_button.sizePolicy().hasHeightForWidth())
-        self.github_button.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.github_button.sizePolicy().hasHeightForWidth())
+        self.github_button.setSizePolicy(sizePolicy2)
         self.github_button.setMinimumSize(QSize(120, 80))
         self.github_button.setStyleSheet(u"\n"
 "QPushButton {\n"
@@ -386,6 +381,7 @@ class Ui_MainWindow(object):
 "background: \n"
 "qlineargradient(spread:pad, x1:0.881892, y1:0.869318, x2:0.281128, y2:0.398, stop:1 rgba(105, 105, 105, 255), stop:0 rgba(235, 235, 235, 255));\n"
 "}")
+        self.github_button.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
         self.github_button.setText(u"")
         self.github_button.setIconSize(QSize(50, 50))
 
@@ -393,11 +389,11 @@ class Ui_MainWindow(object):
 
         self.label_2 = QLabel(self.service_widget)
         self.label_2.setObjectName(u"label_2")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
-        self.label_2.setSizePolicy(sizePolicy2)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy3)
         font1 = QFont()
         font1.setFamily(u"Avenir")
         font1.setPointSize(20)
@@ -427,25 +423,45 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.text_label.setText(QCoreApplication.translate("MainWindow", u"Richmark", None))
-        self.icon_label.setText("")
+        self.text_label.setText("")
+#if QT_CONFIG(tooltip)
+        self.youtube_button.setToolTip(QCoreApplication.translate("MainWindow", u"Embed a Youtube Video", None))
+#endif // QT_CONFIG(tooltip)
         self.youtube_button.setText("")
+#if QT_CONFIG(tooltip)
+        self.drive_button.setToolTip(QCoreApplication.translate("MainWindow", u"Embed a Document from Google Drive or Docs", None))
+#endif // QT_CONFIG(tooltip)
         self.drive_button.setText("")
+#if QT_CONFIG(tooltip)
+        self.vimeo_button.setToolTip(QCoreApplication.translate("MainWindow", u"Embed a Vimeo Video", None))
+#endif // QT_CONFIG(tooltip)
         self.vimeo_button.setText("")
+#if QT_CONFIG(tooltip)
+        self.twitter_button.setToolTip(QCoreApplication.translate("MainWindow", u"Embed a Tweet", None))
+#endif // QT_CONFIG(tooltip)
         self.twitter_button.setText("")
+#if QT_CONFIG(tooltip)
+        self.pdf_button.setToolTip(QCoreApplication.translate("MainWindow", u"Embed an online PDF", None))
+#endif // QT_CONFIG(tooltip)
         self.pdf_button.setText("")
 #if QT_CONFIG(tooltip)
-        self.codepen_button.setToolTip(QCoreApplication.translate("MainWindow", u"CodePen", None))
+        self.codepen_button.setToolTip(QCoreApplication.translate("MainWindow", u"Embed a Pen from CodePen", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
         self.codepen_button.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
         self.codepen_button.setText("")
+#if QT_CONFIG(tooltip)
+        self.website_button.setToolTip(QCoreApplication.translate("MainWindow", u"Embed a Website", None))
+#endif // QT_CONFIG(tooltip)
         self.website_button.setText("")
+#if QT_CONFIG(tooltip)
+        self.jsfiddle_button.setToolTip(QCoreApplication.translate("MainWindow", u"Embed a Fiddle from JSFiddle", None))
+#endif // QT_CONFIG(tooltip)
         self.jsfiddle_button.setText("")
-#if QT_CONFIG(statustip)
-        self.github_button.setStatusTip(QCoreApplication.translate("MainWindow", u"GitHub", None))
-#endif // QT_CONFIG(statustip)
+#if QT_CONFIG(tooltip)
+        self.github_button.setToolTip(QCoreApplication.translate("MainWindow", u"Embed a Gist or Github File with syntax highlighting", None))
+#endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(shortcut)
         self.github_button.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+G", None))
 #endif // QT_CONFIG(shortcut)

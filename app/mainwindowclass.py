@@ -1,5 +1,5 @@
-from PySide6.QtGui import *
-from PySide6.QtWidgets import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
 from mainwindow import Ui_MainWindow
 
 
@@ -16,7 +16,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.resize(400,400)
         self.bar = self.menuBar()
-        self.setWindowTitle("RichMark")
+        self.setWindowTitle("MarkdownEmbedder")
 
         #connect all the buttons
         self.github_button.clicked.connect(lambda x: self.dialog.exec("GitHub"))

@@ -1,8 +1,11 @@
 <RCC>
   <qresource prefix="/icon">
+    <file>img/font_transp.png</file>
     <file>img/arrow.png</file>
-    <file alias="icon.png">img/icon.png</file>
-    <file alias="markdown.png">img/markdown.png</file>
+    <file alias="icon">img/icon.png</file>
+    <file alias="markdown">img/markdown.png</file>
+    <file alias="logo_transp">img/logo_transp.png</file>
+    <file alias="logo_white">img/logo_white.png</file>
   </qresource>
   <qresource prefix="/lang">
     <file alias="languages.json">languages.json</file>
@@ -12,8 +15,6 @@
     <file alias="github">img/github.png</file>
     <file alias="drive">img/google_drive.png</file>
     <file alias="jsfiddle">img/jsfiddle.png</file>
-    <file alias="latex">img/latex.png</file>
-    <file alias="map">img/map.png</file>
     <file alias="twitter">img/twitter.png</file>
     <file alias="vimeo">img/vimeo.png</file>
     <file alias="website">img/website.png</file>

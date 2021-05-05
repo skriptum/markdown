@@ -1,0 +1,47 @@
+<svg width="1600.0000000000002" height="1200" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <rect filter="url(#svg_23_blur)" opacity="0.4" rx="100" id="svg_23" height="954.01296" width="1104.015" y="137.99377" x="286.99314" fill="#000000"/>
+  <rect rx="100" id="svg_24" height="954.01296" width="1104.015" y="105.99334" x="252.99268" fill="url(#svg_26)"/>
+  <g filter="url(#svg_3_blur)" opacity="0.25" id="svg_3">
+   <path id="svg_1" d="m484.66233,780.61842l0,-334.29764l98.32284,0l98.32284,122.90355l98.32284,-122.90355l98.32284,0l0,334.29764l-98.32284,0l0,-191.72953l-98.32284,122.90355l-98.32284,-122.90355l0,191.72953l-98.32284,0z"/>
+   <path id="svg_2" d="m1077.38902,789.25539l-148.53892,-163.39281l99.02595,0l0,-173.29541l99.02595,0l0,173.29541l99.02595,0l-148.53892,163.39281l-0.00001,0l0.00001,0z"/>
+   <g transform="matrix(-2.31348, 0, 0, -2.31348, 2662.24, 1140.25)" id="svg_7">
+    <rect transform="rotate(90, 636.088, 354.952)" id="svg_4" height="103" width="25" y="303.45143" x="623.58831"/>
+    <rect id="svg_5" height="275" width="25" y="92.45144" x="584.58831"/>
+    <rect transform="rotate(90, 637.088, 104.951)" id="svg_6" height="103" width="25" y="53.45143" x="624.58831"/>
+   </g>
+   <g id="svg_11">
+    <rect transform="matrix(0, 2.31348, -2.31348, 0, 1372.48, 794.387)" id="svg_8" height="103" width="25" y="329.22992" x="33.62094"/>
+    <rect id="svg_9" height="636.20656" width="57.83697" y="293.79859" x="372.51811"/>
+    <rect transform="matrix(0, 2.31348, -2.31348, 0, 796.417, 213.704)" id="svg_10" height="103" width="25" y="79.22992" x="34.62094"/>
+   </g>
+  </g>
+  <g id="svg_22">
+   <path id="svg_12" d="m448.66185,756.6181l0,-334.29764l98.32284,0l98.32284,122.90355l98.32284,-122.90355l98.32284,0l0,334.29764l-98.32284,0l0,-191.72953l-98.32284,122.90355l-98.32284,-122.90355l0,191.72953l-98.32284,0z"/>
+   <path id="svg_13" d="m1041.38854,765.25507l-148.53892,-163.39281l99.02595,0l0,-173.29541l99.02595,0l0,173.29541l99.02595,0l-148.53892,163.39281l-0.00001,0l0.00001,0z"/>
+   <g transform="matrix(-2.31348, 0, 0, -2.31348, 2662.24, 1140.25)" id="svg_17">
+    <rect transform="rotate(90, 651.649, 365.326)" id="svg_14" height="103" width="25" y="313.82551" x="639.1494"/>
+    <rect id="svg_15" height="275" width="25" y="102.82552" x="600.1494"/>
+    <rect transform="rotate(90, 652.649, 115.326)" id="svg_16" height="103" width="25" y="63.82551" x="640.1494"/>
+   </g>
+   <g id="svg_21">
+    <rect transform="matrix(0, 2.31348, -2.31348, 0, 1372.48, 794.387)" id="svg_18" height="103" width="25" y="344.79111" x="23.24682"/>
+    <rect id="svg_19" height="636.20656" width="57.83697" y="269.79826" x="336.51762"/>
+    <rect transform="matrix(0, 2.31348, -2.31348, 0, 796.417, 213.704)" id="svg_20" height="103" width="25" y="94.79111" x="24.24682"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_3_blur">
+   <feGaussianBlur stdDeviation="10" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_23_blur">
+   <feGaussianBlur stdDeviation="10" in="SourceGraphic"/>
+  </filter>
+  <linearGradient y2="1" x2="1" y1="0" x1="0" id="svg_26">
+   <stop offset="0" stop-opacity="0.99609" stop-color="#ffffff"/>
+   <stop offset="1" stop-opacity="0.99609" stop-color="#cccccc"/>
+  </linearGradient>
+ </defs>
+</svg>

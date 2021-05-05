@@ -3,14 +3,14 @@
 ################################################################################
 ## Form generated from reading UI file 'dialog.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.0.2
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *
-from PySide6.QtGui import *
-from PySide6.QtWidgets import *
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
 
 import resources_rc
 
@@ -53,7 +53,7 @@ class Ui_Dialog(object):
         sizePolicy.setHeightForWidth(self.icon.sizePolicy().hasHeightForWidth())
         self.icon.setSizePolicy(sizePolicy)
         self.icon.setMaximumSize(QSize(100, 100))
-        self.icon.setPixmap(QPixmap(u":/icon/markdown.png"))
+        self.icon.setPixmap(QPixmap(u":/icon/logo_transp"))
         self.icon.setScaledContents(True)
         self.icon.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
