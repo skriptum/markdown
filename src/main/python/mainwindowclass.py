@@ -12,6 +12,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.dialog = dialog
 
+        
 
         self.resize(400,400)
         self.bar = self.menuBar()

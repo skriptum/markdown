@@ -2,13 +2,8 @@
   <qresource prefix="/icon">
     <file>img/font_transp.png</file>
     <file>img/arrow.png</file>
-    <file alias="icon">img/icon.png</file>
     <file alias="markdown">img/markdown.png</file>
-    <file alias="logo_transp">img/logo_transp.png</file>
     <file alias="logo_white">img/logo_white.png</file>
-  </qresource>
-  <qresource prefix="/lang">
-    <file alias="languages.json">languages.json</file>
   </qresource>
   <qresource prefix="/logos">
     <file alias="codepen">img/codepen.png</file>

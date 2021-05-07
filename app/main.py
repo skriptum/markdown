@@ -2,7 +2,7 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 import sys
 
-# circular importing !
+#beware of circular importing !
 from dialogclass import DialogClass
 from mainwindowclass import MainWindow
 
@@ -14,9 +14,9 @@ app.setQuitOnLastWindowClosed(False)
 app.setWindowIcon(QIcon(u":/icon/icon"))
 
 clipboard = app.clipboard() #needed in the dialog window class !
-
+tray = QSystemTrayIcon()
 #set up the windows
-app.dialog_window = DialogClass(clipboard)
+app.dialog_window = DialogClass(clipboard, tray)
 
 main_window = MainWindow(app.dialog_window)
 
@@ -31,7 +31,6 @@ main_window = MainWindow(app.dialog_window)
 icon = QIcon(u":/icon/logo_white")
 
 # Create the tray
-tray = QSystemTrayIcon()
 tray.setIcon(icon)
 tray.setVisible(True)
 
@@ -133,12 +132,12 @@ code_menu.addAction(github_action)
 #----------------------------
 #add the menus to the window and tray
 tray.setContextMenu(shortcut_menu)
+#added message support
+tray.show()
+
 main_window.bar.addMenu(general_menu)
 main_window.bar.addMenu(media_menu)
 main_window.bar.addMenu(code_menu)
-
-
-
 
 
 
