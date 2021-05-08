@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" width="500" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <path d="M 251.698 17.126 L 452.731 133.193 L 452.731 365.325 L 251.698 481.392 L 50.665 365.326 L 50.665 133.192 Z" style="stroke-width: 0px;" bx:shape="n-gon 251.698 249.259 232.133 232.133 6 0 1@bad8864f">
+    <title>Cube</title>
+  </path>
+  <g transform="matrix(1.20386, 0, 0, 1.20386, -38.859108, -52.046173)" style="">
+    <title>Lines</title>
+    <line style="stroke: rgb(255, 255, 255); stroke-width: 20px;" x1="71.953" y1="151.897" x2="243.155" y2="250.309"/>
+    <line style="stroke: rgb(255, 255, 255); stroke-width: 20px;" x1="239.93" y1="151.233" x2="414.826" y2="251.769" transform="matrix(-0.5, 0.866025, -0.866025, -0.5, 665.571999, 18.733896)"/>
+    <line style="stroke: rgb(255, 255, 255); stroke-width: 20px;" x1="155.403" y1="297.652" x2="329.093" y2="397.495" transform="matrix(0.5, 0.866025, -0.866025, 0.5, 422.131419, -36.006194)"/>
+  </g>
+  <g transform="matrix(1.20386, 0, 0, 1.20386, -38.859108, -52.046173)" style="">
+    <title>Arrow</title>
+    <path style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 0px; stroke-miterlimit: 1;" d="M 280.282 323.067 L 330.596 367.091 L 377.849 268.355 L 280.282 323.067 Z"/>
+    <path style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 0px; stroke-miterlimit: 1;" d="M 309.662 310.086 L 309.616 244.001 L 348.228 221.861 L 348.513 290.651 L 309.662 310.086 Z"/>
+  </g>
+  <g transform="matrix(1.20386, 0, 0, 1.20386, -38.859108, -52.046173)" style="">
+    <title>Letter</title>
+    <rect x="130.613" y="336.093" width="25" height="89.914" style="fill: rgb(255, 255, 255);" transform="matrix(0.906308, -0.422618, 0.462342, 0.887784, -174.786285, -12.871392)"/>
+    <rect x="138.879" y="230.884" width="26.581" height="61.768" style="stroke-width: 0px; stroke-linecap: round; stroke-linejoin: round; fill: rgb(255, 255, 255);" transform="matrix(0.642787, 0.766045, -0.737871, 0.676363, 263.724304, -6.586878)"/>
+    <path style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(255, 255, 255);" d="M 155.342 284.483 L 132.302 293.966 L 146.596 324.585 L 165.349 307.767 C 165.349 307.767 155.707 284.826 155.342 284.483 Z"/>
+    <path style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(255, 255, 255);" d="M 121.066 344.992 L 93.918 329.463 L 93.918 203.881 L 121.518 219.209 L 121.066 344.992 Z"/>
+    <path style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(255, 255, 255);" d="M 211.166 397.878 L 184.018 382.349 L 184.018 256.767 L 211.618 272.095 L 211.166 397.878 Z"/>
+  </g>
+  <g transform="matrix(1.20386, 0, 0, 1.20386, -38.859108, -55.657757)" style="">
+    <title>Tags</title>
+    <g transform="matrix(0.856603, 0, 0, 0.856603, 27.985493, 24.645607)" style="">
+      <title>Left Tag</title>
+      <line style="stroke: rgb(255, 255, 255); stroke-width: 26.6225px;" x1="185.44" y1="70.8" x2="185.44" y2="168.17" transform="matrix(0.5, 0.866025, -0.866025, 0.5, 196.197013, -100.853254)"/>
+      <line style="stroke: rgb(255, 255, 255); stroke-width: 26.6225px;" x1="184.943" y1="122.119" x2="184.943" y2="219.489" transform="matrix(0.5, -0.866025, 0.866025, 0.5, -55.449119, 245.567293)"/>
+      <path style="stroke-width: 0px; stroke: rgb(255, 0, 0); paint-order: fill; fill: rgb(255, 255, 255);" d="M 233.962 183.378 L 233.962 214.559 L 212.832 202.172 C 212.832 202.172 233.974 184.225 233.962 183.378 Z"/>
+      <path style="stroke: rgb(255, 255, 255); stroke-width: 0px; fill: rgb(255, 250, 250);" d="M 136.455 132.462 L 136.455 157.758 L 152.315 154.925 C 152.315 154.925 137.513 133.413 136.455 132.462 Z"/>
+      <path style="stroke-width: 0px; stroke: rgb(255, 0, 0); paint-order: fill; fill: rgb(255, 255, 255);" d="M 233.976 107.356 L 233.976 76.175 L 212.846 88.562 C 212.846 88.562 233.988 106.509 233.976 107.356 Z"/>
+    </g>
+    <g transform="matrix(-0.856603, 0, 0, 0.856603, 457.959076, 24.772617)" style="">
+      <title>Right Tag</title>
+      <line style="stroke: rgb(255, 255, 255); stroke-width: 26.6225px;" x1="185.44" y1="70.8" x2="185.44" y2="168.17" transform="matrix(0.5, 0.866025, -0.866025, 0.5, 196.197013, -100.853254)"/>
+      <line style="stroke: rgb(255, 255, 255); stroke-width: 26.6225px;" x1="184.943" y1="122.119" x2="184.943" y2="219.489" transform="matrix(0.5, -0.866025, 0.866025, 0.5, -55.449119, 245.567293)"/>
+      <path style="stroke-width: 0px; stroke: rgb(255, 0, 0); paint-order: fill; fill: rgb(255, 255, 255);" d="M 233.962 183.378 L 233.962 214.559 L 212.832 202.172 C 212.832 202.172 233.974 184.225 233.962 183.378 Z"/>
+      <path style="stroke: rgb(255, 255, 255); stroke-width: 0px; fill: rgb(255, 250, 250);" d="M 136.455 132.462 L 136.455 157.758 L 152.315 154.925 C 152.315 154.925 137.513 133.413 136.455 132.462 Z"/>
+      <path style="stroke-width: 0px; stroke: rgb(255, 0, 0); paint-order: fill; fill: rgb(255, 255, 255);" d="M 233.976 107.356 L 233.976 76.175 L 212.846 88.562 C 212.846 88.562 233.988 106.509 233.976 107.356 Z"/>
+    </g>
+  </g>
+</svg>
