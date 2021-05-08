@@ -1,6 +1,6 @@
 # Markdown Embedder
 
-![Method Draw Image](img/complete.png)
+![main Image](img/complete.png)
 
 # Markdown Embedder
 
