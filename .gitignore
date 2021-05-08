@@ -5,4 +5,7 @@ venv
 target
 *.png
 
+!img/main.png
+!img/bar.png
+!img/dialog.png
 
